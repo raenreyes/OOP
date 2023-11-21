@@ -5,8 +5,10 @@
        
         static void Main(string[] args)
         {   
+            Car myCar = new Car();
+            myCar.Details();
             //creating an instance of car in the main method called audi
-            Car audi = new Car("Audi A4",760,"Blue");
+            Car audi = new Car("Audi A4",760);
             //this is how can access a method from another class
             audi.Details();
             audi.Drive();

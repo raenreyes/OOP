@@ -7,22 +7,36 @@ using System.Threading.Tasks;
 namespace OOP
 {
     internal class Car
-    {   //underscore is good way on knowing its private
-        //Member Variables 
-        private string _name; //private field to store data
+    {   
+        private string _name; 
         private int _hp;
         private string _color;
         //Default constructor
-        public Car(string name, int hp = 0, string color = "black")
+
+        public Car() { 
+            _name = "Default Car";
+            _hp = 0;
+            _color = "red";
+        }
+        //Partial Specfication constructor
+        public Car(string name, int hp = 0)
         {
-            _name = name; //assign it to out private field
+            _name = name; 
+            _hp = hp;
+            _color = "Blue";
+            Console.WriteLine(name + " was created");
+        }
+        //Full constructor
+        public Car(string name, int hp, string color)
+        {
+            _name = name;
             _hp = hp;
             _color = color;
             Console.WriteLine(name + " was created");
-            
-            
+
+
         }
-        //Member Methods
+
         public void Drive ()
         {
             Console.WriteLine(_name + " is driving");
