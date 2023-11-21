@@ -2,19 +2,17 @@
 {
     internal class Program
     {
-       
+
         static void Main(string[] args)
-        {   
+        {
             Car myCar = new Car();
+
             myCar.Details();
-            //creating an instance of car in the main method called audi
-            Car audi = new Car("Audi A4",760);
-            //this is how can access a method from another class
+            Car audi = new Car("Audi A4", 760);
             audi.Details();
-            audi.Drive();
-            Car bmw = new Car("BMW M5",350,"Yellow");//creating another instance of car
+
+            Car bmw = new Car("BMW M5", 350, "Yellow");
             bmw.Details();
-            bmw.Drive();
 
             Console.WriteLine("Press 1 if you want the car to stop");
 
@@ -23,10 +21,11 @@
             {
                 audi.Stop();
             }
-            else {
+            else
+            {
                 Console.WriteLine("Car keeps driving");
             }
-            
+
         }
     }
 }

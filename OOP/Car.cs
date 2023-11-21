@@ -11,33 +11,35 @@ namespace OOP
         private string _name; 
         private int _hp;
         private string _color;
-        //Default constructor
+       
 
         public Car() { 
-            _name = "Default Car";
+            _name = "Car";
             _hp = 0;
-            _color = "red";
+            _color = "Red";
+            Console.WriteLine(_name + " was created");
         }
-        //Partial Specfication constructor
+
         public Car(string name, int hp = 0)
         {
             _name = name; 
             _hp = hp;
             _color = "Blue";
-            Console.WriteLine(name + " was created");
+            Console.WriteLine(_name + " was created");
+            Drive();//calling private method
         }
-        //Full constructor
+       
         public Car(string name, int hp, string color)
         {
             _name = name;
             _hp = hp;
             _color = color;
-            Console.WriteLine(name + " was created");
-
+            Console.WriteLine(_name + " was created");
+            Drive();//calling private method
 
         }
 
-        public void Drive ()
+        private void Drive () //made this method private so it cant be called from the main class
         {
             Console.WriteLine(_name + " is driving");
         }
