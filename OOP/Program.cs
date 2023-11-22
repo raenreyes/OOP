@@ -6,7 +6,7 @@
         static void Main(string[] args)
         {
             Car myCar = new Car();
-
+            myCar.SetName("Bugatti"); 
             myCar.Details();
             Car audi = new Car("Audi A4", 760);
             audi.Details();

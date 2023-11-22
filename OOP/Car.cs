@@ -11,6 +11,20 @@ namespace OOP
         private string _name; 
         private int _hp;
         private string _color;
+
+        
+        public void SetName (string name)
+        {
+            
+            if (name == string.Empty)
+            {
+                _name = "Default";
+            }
+            else
+            {
+                _name = name;
+            }
+        }
        
 
         public Car() { 
@@ -26,7 +40,7 @@ namespace OOP
             _hp = hp;
             _color = "Blue";
             Console.WriteLine(_name + " was created");
-            Drive();//calling private method
+            Drive();
         }
        
         public Car(string name, int hp, string color)
@@ -35,11 +49,11 @@ namespace OOP
             _hp = hp;
             _color = color;
             Console.WriteLine(_name + " was created");
-            Drive();//calling private method
+            Drive();
 
         }
 
-        private void Drive () //made this method private so it cant be called from the main class
+        private void Drive ()
         {
             Console.WriteLine(_name + " is driving");
         }
