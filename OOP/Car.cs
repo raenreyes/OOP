@@ -8,40 +8,27 @@ namespace OOP
 {
     internal class Car
     {
+        //private member variable
         private string _name;
         private int _hp;
         private string _color;
 
-        public void SetName(string name)
-        {
-
-            if (name == string.Empty)
+        //this is a public property
+        public string Name {
+            get { return _name; } //this is the get accesser
+            //this takes the value that we entered for it
+            set
             {
-                _name = "Default";
+                if (value == string.Empty)
+                {
+                    _name = "NO NAME SET";
+                }
+                else
+                {
+                    _name = value;
+                } //this is the set accesser
             }
-            else
-            {
-                _name = name;
-            }
         }
-        public void SetHP(int hp)
-        {
-            _hp = hp;
-        }
-
-        //getters
-        public string GetName()
-        {
-
-            return _name;
-        }
-
-        public int GetHP()
-        {
-            return _hp;
-        }
-
-
         public Car()
         {
             _name = "Car";
@@ -68,7 +55,6 @@ namespace OOP
             Drive();
 
         }
-
         private void Drive()
         {
             Console.WriteLine(_name + " is driving");
@@ -79,7 +65,7 @@ namespace OOP
         }
         public void Details()
         {
-            Console.WriteLine("The " + _color + " " + _name + " has an hp of " + _hp);
+            Console.WriteLine("My " + _color + " " + _name + " has an hp of " + _hp);
         }
     }
 }
