@@ -6,7 +6,11 @@
         static void Main(string[] args)
         {
             Car myCar = new Car();
-            myCar.SetName("Bugatti"); 
+            //set the name
+            myCar.SetName("Bugatti");
+            myCar.SetHP(1400);
+            //then get the name and the hp
+            Console.WriteLine("My car is a "+ myCar.GetName() + " and it has " + myCar.GetHP());
             myCar.Details();
             Car audi = new Car("Audi A4", 760);
             audi.Details();

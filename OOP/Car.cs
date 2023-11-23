@@ -7,15 +7,14 @@ using System.Threading.Tasks;
 namespace OOP
 {
     internal class Car
-    {   
-        private string _name; 
+    {
+        private string _name;
         private int _hp;
         private string _color;
 
-        
-        public void SetName (string name)
+        public void SetName(string name)
         {
-            
+
             if (name == string.Empty)
             {
                 _name = "Default";
@@ -25,24 +24,41 @@ namespace OOP
                 _name = name;
             }
         }
-       
+        public void SetHP(int hp)
+        {
+            _hp = hp;
+        }
 
-        public Car() { 
+        //getters
+        public string GetName()
+        {
+
+            return _name;
+        }
+
+        public int GetHP()
+        {
+            return _hp;
+        }
+
+
+        public Car()
+        {
             _name = "Car";
-            _hp = 0;
+            _hp = 5;
             _color = "Red";
             Console.WriteLine(_name + " was created");
         }
 
         public Car(string name, int hp = 0)
         {
-            _name = name; 
+            _name = name;
             _hp = hp;
             _color = "Blue";
             Console.WriteLine(_name + " was created");
             Drive();
         }
-       
+
         public Car(string name, int hp, string color)
         {
             _name = name;
@@ -53,7 +69,7 @@ namespace OOP
 
         }
 
-        private void Drive ()
+        private void Drive()
         {
             Console.WriteLine(_name + " is driving");
         }
@@ -61,7 +77,7 @@ namespace OOP
         {
             Console.WriteLine(_name + " now stopped!");
         }
-        public void Details ()
+        public void Details()
         {
             Console.WriteLine("The " + _color + " " + _name + " has an hp of " + _hp);
         }
