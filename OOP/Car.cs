@@ -15,12 +15,12 @@ namespace OOP
         private int _speed;
 
         //read only and write only only have one of the set and get
-        public int MaxSpeed { get; } = 10;
-        public int SetSpeed { set {_speed = value; } }
+        public int MaxSpeed { get { return _speed; } set { _speed = value; } }
 
-        public string Name {
-            get { return _name; } 
-            
+        public string Name
+        {
+            get { return _name; }
+
             set
             {
                 if (value == string.Empty)
@@ -30,7 +30,7 @@ namespace OOP
                 else
                 {
                     _name = value;
-                } 
+                }
             }
         }
         public Car()
