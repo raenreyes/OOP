@@ -12,6 +12,9 @@ namespace OOP
         private string _name;
         private int _hp;
         private string _color;
+        private int _speed;
+
+        public int MaxSpeed { get {return _speed; } set {_speed = value; } }
 
         //this is a public property
         public string Name {
@@ -59,13 +62,9 @@ namespace OOP
         {
             Console.WriteLine(_name + " is driving");
         }
-        public void Stop()
-        {
-            Console.WriteLine(_name + " now stopped!");
-        }
         public void Details()
         {
-            Console.WriteLine("My " + _color + " " + _name + " has an hp of " + _hp);
+            Console.WriteLine("My " + _color + " " + _name + " has an hp of " + _hp + " and its top speed is " + _speed + " miles per hour!");
         }
     }
 }

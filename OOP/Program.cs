@@ -7,6 +7,7 @@
         {
             Car myCar = new Car();
             myCar.Name = "Toyota Tacoma";
+            myCar.MaxSpeed = 180;
             myCar.Details();
           
 
