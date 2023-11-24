@@ -14,12 +14,13 @@ namespace OOP
         private string _color;
         private int _speed;
 
-        public int MaxSpeed { get {return _speed; } set {_speed = value; } }
+        //read only and write only only have one of the set and get
+        public int MaxSpeed { get; } = 10;
+        public int SetSpeed { set {_speed = value; } }
 
-        //this is a public property
         public string Name {
-            get { return _name; } //this is the get accesser
-            //this takes the value that we entered for it
+            get { return _name; } 
+            
             set
             {
                 if (value == string.Empty)
@@ -29,7 +30,7 @@ namespace OOP
                 else
                 {
                     _name = value;
-                } //this is the set accesser
+                } 
             }
         }
         public Car()

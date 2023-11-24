@@ -7,7 +7,8 @@
         {
             Car myCar = new Car();
             myCar.Name = "Toyota Tacoma";
-            myCar.MaxSpeed = 180;
+            Console.WriteLine("My car max speed is " + myCar.MaxSpeed + " miles per hour!");
+            myCar.SetSpeed = 78;
             myCar.Details();
           
 
